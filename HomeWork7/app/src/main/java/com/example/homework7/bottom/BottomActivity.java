@@ -20,6 +20,8 @@ public class BottomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom);
 
+        replaceFragment(new Fragment1());
+
         BottomNavigationView bottomNav = findViewById(R.id.navigation_view);
         bottomNav.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) mOnNavigationItemSelectedListener);
     }
@@ -27,19 +29,17 @@ public class BottomActivity extends AppCompatActivity {
     private BottomNavigationView.OnNavigationItemReselectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemReselectedListener() {
         @Override
-        public void onNavigationItemReselected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.nav_home:
+        public void onNavigationItemReselected(@NonNull MenuItem menuItem) {
+            switch (menuItem.getItemId()) {
+                case R.id.nav_airplay:
                     replaceFragment(new Fragment1());
-                    return true;
-                case R.id.nav_favorites:
+                    return;
+                case R.id.nav_circle:
                     replaceFragment(new Fragment2());
-                    return true;
-                case R.id.nav_search:
+                    return;
+                case R.id.nav_cloud:
                     replaceFragment(new Fragment3());
-                    return true;
             }
-            return false;
         }
     };
 
