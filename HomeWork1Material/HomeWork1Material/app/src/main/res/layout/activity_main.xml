@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+   <TextView
+       android:id="@+id/textView"
+       android:textSize="34sp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+   <EditText
+       android:id="@+id/editText"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:hint="Введите текст"
+       tools:ignore="HardcodedText" />
+   <Button
+       android:id="@+id/button_activity_main"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Соединить"
+       android:onClick="buttonClick"
+       tools:ignore="HardcodedText" />
+
+</LinearLayout>
