@@ -8,23 +8,24 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:textSize="34sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editText_activity_second"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введите текст"
+        android:hint="Enter text"
         tools:ignore="HardcodedText" />
     <Button
         android:id="@+id/button_activity_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Соединить"
+        android:text="to press"
         android:onClick="buttonClick"
         tools:ignore="HardcodedText" />
+    <TextView
+        android:id="@+id/textView_activity_second"
+        android:textSize="34sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

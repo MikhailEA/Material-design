@@ -13,17 +13,19 @@ public class MainPresenter {
     private MainView mainView;
 
     public MainPresenter(MainView mainView) {
-        Log.d(TAG, "MainPresenter: ");
+        //Log.d(TAG, "MainPresenter: ");
         this.mainView = mainView;
         model = new Model();
     }
 
-    private int calcX(int x) { return x ; }
+    private String appendStr(String oldStr, String str) {
+        return oldStr + str;
+    }
 
-    public void onButtonClick() {
-        int oldX = model.getX();
-        int newX = calcX(oldX);
-        model.setX(newX);
-        mainView.setButtonText(newX);
+    public void onButtonClick(String str) {
+        String oldStr = model.getStr();
+        String newStr = appendStr(oldStr, str);
+        model.setStr(newStr);
+        mainView.setButtonText(newStr);
     }
 }

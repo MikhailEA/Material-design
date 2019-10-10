@@ -1,9 +1,9 @@
 package com.example.homework1material.model;
 
 public class Model {
-    private int x = 1;
+    private String str = "";
 
-    public int getX() { return x; }
+    public String getStr() { return str; }
 
-    public void setX(int x) { this.x = x; }
+    public void setStr(String str) { this.str = str; }
 }

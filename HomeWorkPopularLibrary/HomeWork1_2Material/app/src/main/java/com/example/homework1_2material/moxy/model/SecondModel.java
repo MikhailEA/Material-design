@@ -1,9 +1,9 @@
 package com.example.homework1_2material.moxy.model;
 
 public class SecondModel {
-    private int x = 1;
+    private String str = "";
 
-    public int get() { return x; }
+    public String getStr() { return str; }
 
-    public void setX(int x) { this.x = x; }
+    public void setStr(String str) { this.str = str; }
 }
