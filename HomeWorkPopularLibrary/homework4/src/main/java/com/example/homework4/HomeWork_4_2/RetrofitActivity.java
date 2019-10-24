@@ -17,6 +17,9 @@ public class RetrofitActivity extends AppCompatActivity {
 
     private static final String TAG = "RetrofitActivity";
 
+    @BindView(R.id.image_view_activity_picasso)
+    ImageView imageView;
+
     private RetrofitPresenter retrofitPresenter;
 
     @Override
@@ -30,4 +33,6 @@ public class RetrofitActivity extends AppCompatActivity {
         Log.d(TAG, "onClickButton: ");
         retrofitPresenter.getString();
     }
+
+
 }
