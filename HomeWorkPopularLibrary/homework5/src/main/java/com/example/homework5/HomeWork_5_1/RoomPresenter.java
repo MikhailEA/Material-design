@@ -2,6 +2,9 @@ package com.example.homework5.HomeWork_5_1;
 
 import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
@@ -16,9 +19,7 @@ class RoomPresenter {
 
     public void putData() {
         User user = new User();
-        user.age = 30;
-        user.name = "Aleksandr";
-        //user.surname = "Ivan's";
+        user.id = 1;
 
         Disposable disposable = userDao.insert(user).subscribeOn(Schedulers.io()).
                 observeOn(AndroidSchedulers.mainThread())
@@ -29,11 +30,22 @@ class RoomPresenter {
                 });
     }
 
+    public void putListData() {
+        User user1 = new User();
+        user1.id = 1;
+        User user2 = new User();
+        user2.id = 2;
+
+        List<User> list = new ArrayList<>();
+        list.add(user1);
+        list.add(user2);
+    }
+
     public void getData() {
         Disposable disposable = userDao.getAll ().subscribeOn (Schedulers.io ()).
                 observeOn (AndroidSchedulers.mainThread ())
                 .subscribe(users -> {
-                    Log.d(TAG, "getData: " + users + " " + Thread.currentThread().getName());
+                    Log.d(TAG, "getData: " + users);
                 }, throwable -> {
                     Log.d(TAG, "getData: " + throwable);
                 });
