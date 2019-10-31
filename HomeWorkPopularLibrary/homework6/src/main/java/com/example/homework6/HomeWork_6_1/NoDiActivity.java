@@ -14,7 +14,6 @@ public class NoDiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_no_di);
 
         Red red = new Red();
-        Green green = new Green();
         White white = new White();
     }
 }

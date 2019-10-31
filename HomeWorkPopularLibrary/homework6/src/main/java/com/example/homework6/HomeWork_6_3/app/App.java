@@ -2,8 +2,6 @@ package com.example.homework6.HomeWork_6_3.app;
 
 import android.app.Application;
 
-
-
 public class App extends Application {
 
     private static AppComponent appComponent;
@@ -18,10 +16,6 @@ public class App extends Application {
 
     public AppComponent generateAppComponent() {
         return DaggerAppComponent.builder().appModule(new AppModule(this)).build();
-
-
     }
-
-
 }
 

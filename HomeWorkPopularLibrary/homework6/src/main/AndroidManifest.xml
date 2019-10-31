@@ -18,13 +18,15 @@
         <activity android:name=".HomeWork_6_2.DiActivity"
             tools:ignore="InnerclassSeparator" />
         <activity android:name=".HomeWork_6_1.NoDiActivity"
-            tools:ignore="InnerclassSeparator" />
-        <activity android:name=".MainActivity">
+            tools:ignore="InnerclassSeparator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
