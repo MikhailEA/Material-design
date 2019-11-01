@@ -13,24 +13,20 @@ public class TestMethodOfAddingTwoNumbers {
 
     private AdditionOfTwoNumbers additionOfTwoNumbers;
 
-    @BeforeClass
-    public static void beforeClass() {
-        System.out.println("beforeClass");
-    }
-
     @Before
     public void before() {
+
         additionOfTwoNumbers = new AdditionOfTwoNumbers();
     }
     @Test
     public void PositiveScenario() {
         int theAmount = additionOfTwoNumbers.MethodOfAddingTwoNumbers(345,234);
-        Assert.assertEquals(theAmount, 111);
+        Assert.assertEquals(theAmount, 579);
     }
 
     @Test
     public void NegativeScenario() {
         int theAmount = additionOfTwoNumbers.MethodOfAddingTwoNumbers(345,234);
-        Assert.assertNotEquals(theAmount,-111);
+        Assert.assertNotEquals(theAmount,580);
     }
 }
