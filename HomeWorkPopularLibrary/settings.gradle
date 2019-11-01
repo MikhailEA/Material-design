@@ -1,0 +1,2 @@
+include ':homework1', ':homework3', ':homework2', ':homework4', ':homework5', ':homework6', ':homework7'
+rootProject.name='HomeWorkPopularLibrary'
